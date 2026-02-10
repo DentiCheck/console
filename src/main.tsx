@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
+import { AppProvider } from '@/app/providers/AppProvider'
+import { AppRoutes } from '@/app/routes/AppRoutes'
+import '@/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-            <h1 className="text-3xl font-bold text-blue-600">
-                Denticheck Console Initialized
-            </h1>
-        </div>
+        <AppProvider>
+            <AppRoutes />
+        </AppProvider>
     </React.StrictMode>,
 )
